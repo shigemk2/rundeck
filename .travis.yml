@@ -25,14 +25,4 @@ addons:
     - fakeroot
     #- xmlstarlet #once added to whitelist
     #- jq #once added to whitelist
-# whitelist
-branches:
-  only:
-    - master
-
-notifications:
-  irc:
-    - "irc.freenode.org#rundeck"
-  #email: false
-
 
