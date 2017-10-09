@@ -8,6 +8,8 @@ sudo: required
 services:
   - docker
 before_install:
+  - echo /etc/hostname
+  - cat /etc/lsb-release
   - sudo apt-get clean
   - sudo apt-get update -qq
   - sudo apt-get install -y xmlstarlet jq
