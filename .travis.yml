@@ -15,7 +15,6 @@ before_install:
 script:
     - './gradlew clean build && groovy testbuild.groovy -gradle && make TAG=SNAPSHOT BUILD_NUM=$TRAVIS_BUILD_NUMBER rpm deb && DOCKER_COMPOSE_SPEC=docker-compose-api-mysql.yaml bash run-docker-api-tests.sh && bash run-docker-tests.sh && bash run-docker-ssl-tests.sh && bash run-docker-ansible-tests.sh'
 addons:
-  hostname: rdbuild
   apt:
     packages:
     - groovy
@@ -26,4 +25,3 @@ addons:
     - fakeroot
     #- xmlstarlet #once added to whitelist
     #- jq #once added to whitelist
-
